@@ -10,7 +10,7 @@ import {
   SkillsScreen,
 } from "./components";
 
-function App() {
+export const App = () => {
   return (
     <React.Fragment>
       <Header />
@@ -21,6 +21,4 @@ function App() {
       <ContactScreen />
     </React.Fragment>
   );
-}
-
-export default App;
+};
