@@ -13,12 +13,12 @@ import {
 export const App = () => {
   return (
     <React.Fragment>
-      <Header />
+      {/* <Header /> */}
       <Background />
-      <HomeScreen />
+      {/* <HomeScreen />
       <SkillsScreen />
       <ProjectsScreen />
-      <ContactScreen />
+      <ContactScreen /> */}
     </React.Fragment>
   );
 };
