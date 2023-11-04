@@ -1,79 +1,100 @@
+const rootThree = Math.sqrt(3); // needed for hexagon calculations
+
 export class Hex {
   x: number;
   y: number;
   size: number;
   targetSize: number;
-  colour: string; // CHECK COLOUR TYPE
+  colour: string;
+  maxSize: number;
+  minSize: number;
+  shrinkSpeed: number;
+  growSpeed: number;
+  maxMouseRadius: number;
+  minMouseRadius: number;
+  mouse: {
+    x: number;
+    y: number;
+  };
 
-  constructor(x: number, y: number, size: number, colour: string) {
+  constructor(
+    x: number,
+    y: number,
+    size: number,
+    colour: string,
+    maxSize: number,
+    minSize: number,
+    shrinkSpeed: number,
+    growSpeed: number,
+    maxMouseRadius: number,
+    minMouseRadius: number,
+    mouse: {
+      x: number;
+      y: number;
+    }
+  ) {
     this.x = x;
     this.y = y;
     this.size = size; // the current hex size
     this.targetSize = 0; // the size the hex is growing or shrinking towards.
     this.colour = colour;
+    this.maxSize = maxSize;
+    this.minSize = minSize;
+    this.shrinkSpeed = shrinkSpeed;
+    this.growSpeed = growSpeed;
+    this.maxMouseRadius = maxMouseRadius;
+    this.minMouseRadius = minMouseRadius;
+    this.mouse = mouse;
   }
 
-  draw() {
-    // draws to ctxH
-    ctxH.beginPath();
-    ctxH.moveTo(this.x - this.size, this.y);
-    ctxH.lineTo(this.x - this.size / 2, this.y + (this.size * rootThree) / 2);
-    ctxH.lineTo(this.x + this.size / 2, this.y + (this.size * rootThree) / 2);
-    ctxH.lineTo(this.x + this.size, this.y);
-    ctxH.lineTo(this.x + this.size / 2, this.y - (this.size * rootThree) / 2);
-    ctxH.lineTo(this.x - this.size / 2, this.y - (this.size * rootThree) / 2);
-    ctxH.closePath();
-    ctxH.fillStyle = this.colour;
-    ctxH.fill();
+  draw(ctx: CanvasRenderingContext2D) {
+    ctx.beginPath();
+    ctx.moveTo(this.x - this.size, this.y);
+    ctx.lineTo(this.x - this.size / 2, this.y + (this.size * rootThree) / 2);
+    ctx.lineTo(this.x + this.size / 2, this.y + (this.size * rootThree) / 2);
+    ctx.lineTo(this.x + this.size, this.y);
+    ctx.lineTo(this.x + this.size / 2, this.y - (this.size * rootThree) / 2);
+    ctx.lineTo(this.x - this.size / 2, this.y - (this.size * rootThree) / 2);
+    ctx.closePath();
+    ctx.fillStyle = this.colour;
+    ctx.fill();
   }
 
-  drawBG() {
-    // draws to ctxB
-    ctxB.beginPath();
-    ctxB.moveTo(this.x - this.size, this.y);
-    ctxB.lineTo(this.x - this.size / 2, this.y + (this.size * rootThree) / 2);
-    ctxB.lineTo(this.x + this.size / 2, this.y + (this.size * rootThree) / 2);
-    ctxB.lineTo(this.x + this.size, this.y);
-    ctxB.lineTo(this.x + this.size / 2, this.y - (this.size * rootThree) / 2);
-    ctxB.lineTo(this.x - this.size / 2, this.y - (this.size * rootThree) / 2);
-    ctxB.closePath();
-    ctxB.fillStyle = this.colour;
-    ctxB.fill();
-  }
-
-  update() {
+  update(ctx: CanvasRenderingContext2D) {
     // sets target size and grows or shrinks to meet it.
     let radius = Math.sqrt(
-      (mouse.x - this.x) * (mouse.x - this.x) +
-        (mouse.y - this.y) * (mouse.y - this.y)
+      (this.mouse.x - this.x) * (this.mouse.x - this.x) +
+        (this.mouse.y - this.y) * (this.mouse.y - this.y)
     );
 
-    if (radius < maxMouseRadius) {
-      this.targetSize = maxSize - 1;
-    } else if (radius < minMouseRadius) {
+    if (radius < this.maxMouseRadius) {
+      this.targetSize = this.maxSize - 1;
+    } else if (radius < this.minMouseRadius) {
       this.targetSize =
-        minSize +
-        (maxSize - minSize) *
-          (1 - (radius - maxMouseRadius) / (minMouseRadius - maxMouseRadius));
+        this.minSize +
+        (this.maxSize - this.minSize) *
+          (1 -
+            (radius - this.maxMouseRadius) /
+              (this.minMouseRadius - this.maxMouseRadius));
     } else {
-      this.targetSize = minSize;
+      this.targetSize = this.minSize;
     }
 
     if (
       this.size < this.targetSize &&
-      this.size + growSpeed < this.targetSize
+      this.size + this.growSpeed < this.targetSize
     ) {
-      this.size += growSpeed;
+      this.size += this.growSpeed;
     } else if (
       this.size > this.targetSize &&
-      this.size - shrinkSpeed > this.targetSize
+      this.size - this.shrinkSpeed > this.targetSize
     ) {
-      this.size -= shrinkSpeed;
+      this.size -= this.shrinkSpeed;
     } else {
       this.size = this.targetSize;
     }
 
-    this.draw();
+    this.draw(ctx);
   }
 }
 
@@ -84,19 +105,34 @@ export class Explode {
   innerSize: number;
   done: boolean;
   speed: number;
+  screenDiagonal: number;
+  spotLightColour: string;
+  spotDeepColour: string;
 
-  constructor(x: number, y: number) {
+  constructor(
+    x: number,
+    y: number,
+    size: number,
+    speed: number,
+    spotLightColour: string,
+    spotDeepColour: string
+  ) {
     this.x = x;
     this.y = y;
-    this.size = maxMouseRadius; // outer radius
+    this.size = size; // outer radius
     this.innerSize = 0; // inner radius
     this.done = false; // used to clear off screen explosions
-    this.speed = explodeSpeed;
+    this.speed = speed;
+    this.screenDiagonal = Math.sqrt(
+      window.innerWidth * window.innerWidth +
+        window.innerHeight * window.innerHeight
+    );
+    this.spotLightColour = spotLightColour;
+    this.spotDeepColour = spotDeepColour;
   }
 
-  draw() {
-    // draws to ctxS
-    let gradEx = ctxS.createRadialGradient(
+  draw(ctx: CanvasRenderingContext2D) {
+    let gradEx = ctx.createRadialGradient(
       this.x,
       this.y,
       this.innerSize,
@@ -105,19 +141,19 @@ export class Explode {
       this.size
     );
     gradEx.addColorStop(0, "rgba(0, 0, 0, 0)");
-    gradEx.addColorStop(0.2, spotLightColour);
-    gradEx.addColorStop(0.7, spotDeepColour);
+    gradEx.addColorStop(0.2, this.spotLightColour);
+    gradEx.addColorStop(0.7, this.spotDeepColour);
     gradEx.addColorStop(1, "rgba(0, 0, 0, 0)");
 
-    ctxS.fillStyle = gradEx;
-    ctxS.fillRect(0, 0, window.innerWidth, window.innerHeight);
+    ctx.fillStyle = gradEx;
+    ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
   }
 
-  update() {
+  update(ctx: CanvasRenderingContext2D) {
     // grows the explosion
-    this.size += explodeSpeed;
-    this.innerSize += explodeSpeed;
-    if (this.innerSize > screenDiagonal) this.done = true;
-    this.draw();
+    this.size += this.speed;
+    this.innerSize += this.speed;
+    if (this.innerSize > this.screenDiagonal) this.done = true;
+    this.draw(ctx);
   }
 }
