@@ -1,0 +1,13 @@
+.header{
+  position: absolute;
+  top: 0;
+  height: 4cqh;
+  width: 100cqw;
+  color: aqua;
+  background-color: black;
+  z-index: 1;
+  display: flex;
+  align-content: center;
+  justify-content: space-evenly;
+  font-size: 3cqh;
+}
