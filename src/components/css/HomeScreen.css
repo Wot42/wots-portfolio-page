@@ -2,9 +2,10 @@
   position:relative;
   height: 200px;
   width: 400px;
-  z-index:1;
+  z-index: 1;
   margin: 50px;
   overflow: hidden;
+  border: 1px solid #bb9d26;
 }
 
 .name{
@@ -23,7 +24,7 @@
 .boxText{
   position:absolute;
   z-index:2;
-  font-size: 20px;
+  font-size: 30px;
   left: 10px;
   top: 0px;
 }

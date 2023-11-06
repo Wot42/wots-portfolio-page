@@ -15,8 +15,12 @@ export const Background = () => {
   // const spotLightColour = "rgb(210, 255, 255)";
   // const spotDeepColour = "rgb(102, 255, 255)";
   // GREY
-  const hexColour = "rgb(20, 20, 20)"; // colour for the highlight hex
-  const bgColour = "rgb(12, 12, 12)"; // colour for the background hex
+  // const hexColour = "rgb(20, 20, 20)"; // colour for the highlight hex
+  // const bgColour = "rgb(12, 12, 12)"; // colour for the background hex
+  //BRIGHTER GREY
+  const hexColour = "rgb(40, 40, 40)"; // colour for the highlight hex
+  const bgColour = "rgb(20, 20, 20)"; // colour for the background hex
+
   //SEPIA
   // const hexColour = "rgb(80, 40, 20)"; // colour for the highlight hex
   // const bgColour = "rgb(40, 20, 10)"; // colour for the background hex

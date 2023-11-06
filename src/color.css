@@ -4,19 +4,23 @@ body{
 /* gradient is base+20. accent is base+40  */
 .color__black{
   background: radial-gradient(#141414, #000000);
+  background: radial-gradient(#1E1E1E, #000000);
 }
 .color__black--accent{
   background: #282828;
+  background: #323232;
 }
 .color__gold--name-plate{
   color: #645014;
   background: #D2AF28;
+  /* background: #f8d031; */
 }
 .color__gold--text{
-  color:yellow /* CHANGE ME */
+  color:#fedd55; /* CHANGE ME */
 }
 .color__sepia{
   /* background: radial-gradient(#322300, #0A0500); */
+  background: radial-gradient(#3C1E0F, #140A05);
   background: radial-gradient(#3C1E0F, #140A05);
 
 }
@@ -24,39 +28,48 @@ body{
   background:#502814;
 }
 .color__red{
-  background: radial-gradient(#280000, #0A0000);
+  background: radial-gradient(#5A0000, #0A0000);
 
 }
 .color__red--accent{
   background: #3C0000;
+  background: #6E0000;
 }
 .color__blue{
   background: radial-gradient(#000028, #00000A);
+  background: radial-gradient(#00005A, #00000A);
 }
 .color__blue--accent{
   background: #00003C;
+  background: #00006E;
 }
 .color__green{
   background: radial-gradient(#002800, #000A00);
+  background: radial-gradient(#005A00, #000A00);
 
 }
 .color__green--accent{
   background: #003C00;
+  background: #006E00;
 
 }
 .color__turquoise{
   background: radial-gradient(#002828, #000A0A);
+  background: radial-gradient(#005A5A, #000A0A);
 
 }
 .color__turquoise--accent{
   background: #003C3C;
+  background: #006E6E;
 
 }
 .color__purple{
   background: radial-gradient(#280028, #0A000A);
+  background: radial-gradient(#5A005A, #0A000A);
 
 }
 .color__purple--accent{
   background: #3C003C;
+  background: #6E006E;
 
 }
