@@ -5,7 +5,7 @@ import {
   Background,
   // ContactScreen,
   Header,
-  // HomeScreen,
+  HomeScreen,
   // ProjectsScreen,
   // SkillsScreen,
 } from "./components";
@@ -15,8 +15,8 @@ export const App = () => {
     <React.Fragment>
       <Header />
       <Background />
-      {/* <HomeScreen />
-      <SkillsScreen />
+      <HomeScreen />
+      {/* <SkillsScreen />
       <ProjectsScreen />
       <ContactScreen /> */}
     </React.Fragment>

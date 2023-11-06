@@ -1,11 +1,12 @@
 .header{
-  position: absolute;
+  position: fixed;
   top: 0;
+  left:0;
   height: 4cqh;
   width: 100cqw;
-  color: aqua;
+  color: yellow;
   background-color: black;
-  z-index: 1;
+  z-index: 100;
   display: flex;
   align-content: center;
   justify-content: space-evenly;
