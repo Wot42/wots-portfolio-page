@@ -4,8 +4,8 @@ import "./color.css";
 import {
   Background,
   // ContactScreen,
-  // Header,
-  // HomeScreen,
+  Header,
+  HomeScreen,
   // ProjectsScreen,
   // SkillsScreen,
 } from "./components";
@@ -13,10 +13,10 @@ import {
 export const App = () => {
   return (
     <React.Fragment>
-      {/* <Header /> */}
+      <Header />
       <Background />
-      {/* <HomeScreen />
-      <SkillsScreen />
+      <HomeScreen />
+      {/* <SkillsScreen />
       <ProjectsScreen />
       <ContactScreen /> */}
     </React.Fragment>

@@ -9,10 +9,20 @@ export const Background = () => {
   const minSize = 0; // the minimum size of the highlight hexagons
   const maxMouseRadius = 60; // radius from the mouse where the highlights hexes are at their max
   const minMouseRadius = 200; // the radius from the mouse where the highlights hexes are at their min
-  const hexColour = "rgb(0, 30, 100)"; // colour for the highlight hex
-  const bgColour = "rgb(0, 12, 37)"; // colour for the background hex
-  const spotLightColour = "rgb(210, 255, 255)";
-  const spotDeepColour = "rgb(102, 255, 255)";
+  // ORUGINAL
+  // const hexColour = "rgb(0, 30, 100)"; // colour for the highlight hex
+  // const bgColour = "rgb(0, 12, 37)"; // colour for the background hex
+  // const spotLightColour = "rgb(210, 255, 255)";
+  // const spotDeepColour = "rgb(102, 255, 255)";
+  // GREY
+  const hexColour = "rgb(20, 20, 20)"; // colour for the highlight hex
+  const bgColour = "rgb(12, 12, 12)"; // colour for the background hex
+  //SEPIA
+  // const hexColour = "rgb(80, 40, 20)"; // colour for the highlight hex
+  // const bgColour = "rgb(40, 20, 10)"; // colour for the background hex
+
+  const spotLightColour = "rgb(255, 255, 210)";
+  const spotDeepColour = "rgb(255, 255, 102)";
   const shrinkSpeed = 0.3; // the speed at which the highlight hexes shrink
   const growSpeed = 5; // the speed at which highlight hexes grow
   const explodeSpeed = 10; // speed of the explosion effect
