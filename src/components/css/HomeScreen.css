@@ -1,6 +1,7 @@
 .box{
   position:relative;
   height: 200px;
+  height:305px;
   width: 400px;
   z-index: 1;
   margin: 50px;
@@ -11,7 +12,6 @@
 .name{
   font-size: 80px;
   margin: 30px;
-
 }
 
 .diamond{

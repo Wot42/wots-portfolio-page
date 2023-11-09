@@ -4,6 +4,7 @@ body{
 /* gradient is base+20. accent is base+40  */
 .color__black{
   background: radial-gradient(#141414, #000000);
+  /* brighter */
   background: radial-gradient(#1E1E1E, #000000);
 }
 .color__black--accent{
