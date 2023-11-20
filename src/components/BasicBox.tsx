@@ -18,14 +18,17 @@ export const BasicBox = ({ color }: props) => {
         />
       </div>
       <div className="boxText">
-        text text text text text text text text text text text text text text
-        text text text text text text text text text text text text text text
-        text text text text text text text text text text text text text text
-        text text text text text text text text text text text text text text
-        text text text text text text text text text text text text text text
-        text text text text text text text text text text text text text text
-        text text text text text text text text text text text text text text
-        text text text text text text text text text text
+        {" "}
+        <strong>
+          text text text text text text text text text text text text text text
+          text text text text text text text text text text text text text text
+          text text text text text text text text text text text text text text
+          text text text text text text text text text text text text text text
+          text text text text text text text text text text text text text text
+          text text text text text text text text text text text text text text
+          text text text text text text text text text text text text text text
+          text text text text text text text text text text
+        </strong>
       </div>
     </div>
   );

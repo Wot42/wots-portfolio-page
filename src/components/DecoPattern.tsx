@@ -1,5 +1,4 @@
 import React from "react";
-// NOT ON INDEX
 
 interface props {
   height: number;
@@ -33,6 +32,7 @@ export const DecoPattern = ({
   switch (color) {
     case "black":
       strokeColor = "#323232";
+      strokeColor = "#1E1E1E";
       break;
     case "sepia":
       strokeColor = "#502814";
@@ -48,6 +48,7 @@ export const DecoPattern = ({
       break;
     case "turquoise":
       strokeColor = "#006E6E";
+      strokeColor = "#005A5A";
       break;
     case "purple":
       strokeColor = "#6E006E";
