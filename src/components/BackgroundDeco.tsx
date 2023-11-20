@@ -29,12 +29,12 @@ export const BackgroundDeco = () => {
   );
 
   useEffect(() => {
-    window.addEventListener("mousemove", (event) => {
+    const movedMouse = (event: MouseEvent) => {
       mouse.x = event.x;
       mouse.y = event.y;
-    });
+    };
 
-    window.addEventListener("click", () =>
+    const clicked = () => {
       explodeArray.push(
         new Explode(
           mouse.x,
@@ -44,10 +44,9 @@ export const BackgroundDeco = () => {
           spotLightColor,
           spotDeepColor
         )
-      )
-    );
-
-    window.addEventListener("resize", () => {
+      );
+    };
+    const resized = () => {
       setMaskSVG(
         <DecoPatternForBackground
           height={window.innerHeight}
@@ -57,7 +56,19 @@ export const BackgroundDeco = () => {
           scale={55}
         />
       );
-    });
+    };
+
+    window.addEventListener("mousemove", movedMouse);
+
+    window.addEventListener("click", clicked);
+
+    window.addEventListener("resize", resized);
+
+    return () => {
+      window.removeEventListener("mousemove", movedMouse);
+      window.removeEventListener("click", clicked);
+      window.removeEventListener("resize", resized);
+    };
   });
 
   const drawSpot = (ctx: CanvasRenderingContext2D) => {
