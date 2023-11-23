@@ -28,35 +28,7 @@ export const DecoPattern = ({
   const columns = Math.floor((height * 2) / radiusY) + 1;
   const rows = Math.floor(width / lengthHalf) + 2;
   const paths: JSX.Element[] = [];
-  let strokeColor = "yellow";
-  switch (color) {
-    case "black":
-      strokeColor = "#323232";
-      strokeColor = "#1E1E1E";
-      break;
-    case "sepia":
-      strokeColor = "#502814";
-      break;
-    case "red":
-      strokeColor = "#6E0000";
-      break;
-    case "blue":
-      strokeColor = "#00006E";
-      break;
-    case "green":
-      strokeColor = "#006E00";
-      break;
-    case "turquoise":
-      strokeColor = "#006E6E";
-      strokeColor = "#005A5A";
-      break;
-    case "purple":
-      strokeColor = "#6E006E";
-      break;
-
-    default:
-      strokeColor = "#fedd55";
-  }
+  let strokeColor = "currentcolor";
 
   const drawLeaf = () => {
     for (let column = -1; column < columns; column++) {

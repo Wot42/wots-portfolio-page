@@ -1,6 +1,34 @@
-body{
-  background-color: black;
+:root {
+  --black: black;
+  --black--gradient: radial-gradient(#1E1E1E, #000000);
+  --black--accent: #323232;
+  --black--hi-light-gradient: radial-gradient(#333322 10%, #000000 70%);
+  --gold--text: #fedd55;
+  --gold--text--hi-light: #fde995;
+  --gold--name-plate: #D2AF28;
+  --gold--border: #bb9d26;
+  --sepia--gradient: radial-gradient(#3C1E0F, #140A05);
+  --sepia--accent: #502814;
+  --red--gradient: radial-gradient(#5A0000, #0A0000);
+  --red--accent:  #6E0000;
+  --blue--gradient: radial-gradient(#00005A, #00000A);
+  --blue--accent: #00006E;
+  --green--gradient: radial-gradient(#005A00, #000A00);
+  --green--accent: #006E00;
+  --turquoise--gradient: radial-gradient(#005A5A, #000A0A);
+  --turquoise--accent: #006E6E;
+  --purple--gradient: radial-gradient(#5A005A, #0A000A);
+  --purple--accent: #6E006E;
+
 }
+
+body{
+  background-color: var(--black);
+}
+
+
+
+
 /* gradient is base+20. accent is base+40  */
 .color__black{
   background: radial-gradient(#141414, #000000);

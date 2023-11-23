@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./css/Background.css";
-import { useCanvas } from "../hooks/useCanvas";
-import { Explode, Hex } from "../utils/hexClasses";
+import { useCanvas } from "../hooks";
+import { Explode, Hex } from "../utils";
 
 export const Background = () => {
   const rootThree = Math.sqrt(3); // needed for hexagon calculations

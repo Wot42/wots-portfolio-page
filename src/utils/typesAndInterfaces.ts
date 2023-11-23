@@ -1,1 +1,3 @@
-export type PageType = "Home" | "Projects" | "Skills" | "Contact";
+type PageType = "Home" | "Projects" | "Skills" | "Contact";
+
+export { PageType };

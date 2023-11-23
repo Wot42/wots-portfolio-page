@@ -1,5 +1,5 @@
 import React from "react";
-import { PageType } from "../utils/typesAndInterfaces";
+import { PageType } from "utils/typesAndInterfaces";
 
 interface props {
   name: PageType;

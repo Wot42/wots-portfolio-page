@@ -13,7 +13,7 @@
   width: 40cqw;
   z-index: 1;
   margin: 1cqw;
-  border: 1px solid #bb9d26;
+  border: 1px solid var(--gold--border);
 }
 
 .skills-screen__left-box{
@@ -22,5 +22,5 @@
   width: 40cqw;
   z-index: 1;
   margin: 1cqw;
-  border: 1px solid #bb9d26;
+  border: 1px solid var(--gold--border);
 }

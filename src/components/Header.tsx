@@ -1,14 +1,14 @@
 import React from "react";
 import "./css/Header.css";
-import { DecoPattern } from "./DecoPattern";
-import { PageType } from "../utils/typesAndInterfaces";
-import { HeaderButton } from "../features";
+import { HeaderButton } from "../mini-components";
+import { DecoPattern } from ".";
+import { PageType } from "utils/typesAndInterfaces";
 
 export const Header = () => {
   let current: PageType = "Home";
 
   return (
-    <nav className="header color__header color__gold--text">
+    <nav className="header">
       <DecoPattern
         height={window.innerHeight * 0.04}
         width={window.innerWidth}
@@ -27,8 +27,8 @@ export const Header = () => {
   );
 };
 
-// rename error
-// index properly
+// rename error DONE
+// index properly Done
 // color variables
 // color svg by css
 // Scrol set curent page.

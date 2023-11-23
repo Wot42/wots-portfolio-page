@@ -4,9 +4,10 @@
   left: 0;
   height: 4cqh;
   width: 100cqw;
-  background-color: black;
+  background-color: var(--black);
   z-index: 100;
   font-size: 3cqh;
+  color: var(--gold--text)
 }
 
 .header a{
@@ -19,11 +20,9 @@
   z-index: 105;
   padding: 0 1cqw;
 }
-.header li{
-}
+
 .header li div{
   height: 100%;
-  /* width: 10%; */
   position: absolute;
   z-index: 101;
   padding: 0 1cqw;
@@ -31,16 +30,16 @@
 }
 
 .header li:hover div{
-  background-image: radial-gradient(#333322 10%, #000000 70%);
+  background-image: var(--black--hi-light-gradient);
 }
 .header li:hover{
-  color: #fde995;
+  color: var(--gold--text--hi-light);
   cursor: pointer;
 }
 
 .header li.active a{
-  background:#D2AF28;
-  color:black;
+  background: var(--gold--name-plate);
+  color: var(--black);
 }
 
 .header ul{
@@ -56,4 +55,5 @@
 .header svg{
   position: absolute;
   z-index: 102;
+  color: var(--black--accent);
 }
