@@ -18,11 +18,17 @@ export const HomeScreen = ({ setOnScreen, updateCurrentPage }: props) => {
 
   return (
     <div className="home-screen__main-container" id="Home" ref={ref}>
-      <div className="box color__gold--name-plate">
-        <div className="name">Wot Fanar</div>
+      <div className="home-screen__name-plate">
+        <strong>
+          Wot <br /> Fanar
+        </strong>
       </div>
       <div className="color__black home-screen__text-box  color__gold--text">
-        Text
+        <strong>
+          Web developer
+          <br />
+          above name plate has no text and is made of pure css
+        </strong>
       </div>
     </div>
   );

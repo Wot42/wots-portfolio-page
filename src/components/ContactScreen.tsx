@@ -21,7 +21,7 @@ export const ContactScreen = ({ setOnScreen, updateCurrentPage }: props) => {
     <div className="contact-screen__main-container" id="Contact" ref={ref}>
       {" "}
       <motion.div
-        className={`color__purple box color__gold--text`}
+        className={`color__purple contact-screen__card color__gold--text`}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1 }}
@@ -29,7 +29,7 @@ export const ContactScreen = ({ setOnScreen, updateCurrentPage }: props) => {
         <div className="boxAccent">
           <DecoPattern
             height={310}
-            width={400}
+            width={(2 * window.screen.width) / 3}
             thickness={3}
             ratio={2}
             scale={20}

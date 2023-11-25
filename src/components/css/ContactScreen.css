@@ -6,6 +6,23 @@
   justify-content:center;
 }
 
+.contact-screen__card{
+  position:relative;
+  height: 200px;
+  height: 305px;
+  width: 33vw;
+  z-index: 1;
+  margin: 50px;
+  overflow: hidden;
+  border: 1px solid var(--gold--border);
+}
+
+
 .contact-screen__main-container svg {
   color: var(--purple--accent);
+}
+
+@media(max-aspect-ratio: 1/1){
+
+  .contact-screen__card{width: 66vw;}
 }
