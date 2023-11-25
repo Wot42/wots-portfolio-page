@@ -4,9 +4,11 @@ import { HeaderButton } from "../mini-components";
 import { DecoPattern } from ".";
 import { PageType } from "utils/typesAndInterfaces";
 
-export const Header = () => {
-  let current: PageType = "Home";
+interface props {
+  currentPage: PageType;
+}
 
+export const Header = ({ currentPage }: props) => {
   return (
     <nav className="header">
       <DecoPattern
@@ -18,10 +20,10 @@ export const Header = () => {
         color={"black"}
       />
       <ul>
-        <HeaderButton name="Home" current={current} />
-        <HeaderButton name="Skills" current={current} />
-        <HeaderButton name="Projects" current={current} />
-        <HeaderButton name="Contact" current={current} />
+        <HeaderButton name="Home" current={currentPage} />
+        <HeaderButton name="Skills" current={currentPage} />
+        <HeaderButton name="Projects" current={currentPage} />
+        <HeaderButton name="Contact" current={currentPage} />
       </ul>
     </nav>
   );

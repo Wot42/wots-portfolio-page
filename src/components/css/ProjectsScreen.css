@@ -1,18 +1,30 @@
 .projects-screen__main-container{
   width: 100vw;
-  height: 100vh;
   display: flex;
   align-items:center;
   justify-content:center;
   flex-wrap: wrap;
-  container-type: size;
+  container-type: inline-size;
+  margin-bottom: 5vh;
+  margin-top: 5vh;
+  padding: 10vh 0;
 }
 
 .projects-screen__project-box{
   position:relative;
-  height: 40cqh;
+  height: 22.5cqw;
   width: 40cqw;
   z-index: 1;
   margin: 1cqw;
   border: 1px solid var(--gold--border);
+}
+
+@media(max-aspect-ratio: 1/1){
+  .projects-screen__project-box{
+    width: 90cqw;
+    height: 50cqw;
+  }
+  .projects-screen__main-container{
+    padding: 5vh 0;
+  }
 }
