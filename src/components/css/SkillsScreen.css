@@ -1,0 +1,26 @@
+.skills-screen__main-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  container-type: size;
+
+}
+.skills-screen__right-box{
+  position:relative;
+  height: 80cqh;
+  width: 40cqw;
+  z-index: 1;
+  margin: 1cqw;
+  border: 1px solid var(--gold--border);
+}
+
+.skills-screen__left-box{
+  position:relative;
+  height: 80cqh;
+  width: 40cqw;
+  z-index: 1;
+  margin: 1cqw;
+  border: 1px solid var(--gold--border);
+}

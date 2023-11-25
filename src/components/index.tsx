@@ -6,6 +6,7 @@ import { HomeScreen } from "./HomeScreen";
 import { ProjectsScreen } from "./ProjectsScreen";
 import { SkillsScreen } from "./SkillsScreen";
 import { DecoPattern } from "./DecoPattern";
+import { DecoPatternForBackground } from "./DecoPatternForBackground";
 
 export {
   Background,
@@ -16,4 +17,5 @@ export {
   ProjectsScreen,
   SkillsScreen,
   DecoPattern,
+  DecoPatternForBackground,
 };

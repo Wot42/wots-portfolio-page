@@ -4,11 +4,11 @@ import "./color.css";
 import {
   // Background,
   BackgroundDeco,
-  // ContactScreen,
+  ContactScreen,
   Header,
   HomeScreen,
-  // ProjectsScreen,
-  // SkillsScreen,
+  ProjectsScreen,
+  SkillsScreen,
 } from "./components";
 
 export const App = () => {
@@ -17,9 +17,9 @@ export const App = () => {
       <Header />
       <BackgroundDeco />
       <HomeScreen />
-      {/* <SkillsScreen />
+      <SkillsScreen />
       <ProjectsScreen />
-      <ContactScreen /> */}
+      <ContactScreen />
     </React.Fragment>
   );
 };

@@ -1,3 +1,28 @@
+.home-screen__main-container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction: column;
+}
+.home-screen__text-box {
+  position:relative;
+  height: 100px;
+  width: 600px;
+  z-index: 1;
+  margin: 50px;
+  border: 1px solid var(--gold--border);
+}
+
+
+
+
+
+
+
+
+
 .box{
   position:relative;
   height: 200px;
@@ -6,7 +31,7 @@
   z-index: 1;
   margin: 50px;
   overflow: hidden;
-  border: 1px solid #bb9d26;
+  border: 1px solid var(--gold--border);
 }
 
 .name{

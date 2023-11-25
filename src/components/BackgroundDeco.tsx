@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./css/BackgroundDeco.css";
-import { useCanvas } from "../hooks/useCanvas";
-import { Explode } from "../utils/hexClasses";
-import { DecoPatternForBackground } from "./DecoPatternForBackground";
+import { useCanvas } from "../hooks";
+import { Explode } from "../utils";
+import { DecoPatternForBackground } from ".";
 
 export const BackgroundDeco = () => {
   //UPDATED

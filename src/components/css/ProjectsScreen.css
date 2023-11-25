@@ -1,0 +1,18 @@
+.projects-screen__main-container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  flex-wrap: wrap;
+  container-type: size;
+}
+
+.projects-screen__project-box{
+  position:relative;
+  height: 40cqh;
+  width: 40cqw;
+  z-index: 1;
+  margin: 1cqw;
+  border: 1px solid var(--gold--border);
+}
