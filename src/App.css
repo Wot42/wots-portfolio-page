@@ -9,3 +9,8 @@ body{
 html {
   scroll-behavior: smooth;
 }
+
+::selection {
+  background: var(--gold--name-plate);
+  color: var(--black);
+}

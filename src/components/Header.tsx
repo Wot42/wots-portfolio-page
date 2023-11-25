@@ -27,8 +27,4 @@ export const Header = () => {
   );
 };
 
-// rename error DONE
-// index properly Done
-// color variables
-// color svg by css
-// Scrol set curent page.
+// Scroll set curent page.
