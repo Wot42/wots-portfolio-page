@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import "./css/HomeScreen.css";
 import { useInView } from "framer-motion";
+import { CssWords } from "./CssWords";
 
 interface props {
   setOnScreen: React.Dispatch<React.SetStateAction<boolean>>;
@@ -19,16 +20,13 @@ export const HomeScreen = ({ setOnScreen, updateCurrentPage }: props) => {
   return (
     <div className="home-screen__main-container" id="Home" ref={ref}>
       <div className="home-screen__name-plate">
-        <strong>
-          Wot <br /> Fanar
-        </strong>
+        <CssWords />
       </div>
-      <div className="color__black home-screen__text-box  color__gold--text">
-        <strong>
-          Web developer
-          <br />
-          above name plate has no text and is made of pure css
-        </strong>
+      <div className="home-screen__text-box app__fancy-boarder color__gold--text">
+        <div className="home-screen__text-box--container">
+          <h2>Full-Stack Web Developer</h2>
+          <p>(The above name plate has no text and is made of pure css)</p>
+        </div>
       </div>
     </div>
   );

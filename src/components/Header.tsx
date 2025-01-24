@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./css/Header.css";
 import { HeaderButton } from "../mini-components";
 import { DecoPattern } from ".";
@@ -9,16 +9,40 @@ interface props {
 }
 
 export const Header = ({ currentPage }: props) => {
+  const [headerSVG, setHeaderSVG] = useState(
+    <DecoPattern
+      height={window.innerHeight * 0.05}
+      width={window.innerWidth}
+      thickness={3}
+      ratio={2}
+      scale={20}
+      color={"black"}
+      key={"background-deco-pattern"}
+    />
+  );
+
+  useEffect(() => {
+    const resized = () => {
+      setHeaderSVG(
+        <DecoPattern
+          height={window.innerHeight * 0.05}
+          width={window.innerWidth}
+          thickness={3}
+          ratio={2}
+          scale={20}
+          color={"black"}
+          key={"background-deco-pattern"}
+        />
+      );
+    };
+    window.addEventListener("resize", resized);
+    return () => {
+      window.removeEventListener("resize", resized);
+    };
+  });
   return (
     <nav className="header">
-      <DecoPattern
-        height={window.innerHeight * 0.04}
-        width={window.innerWidth}
-        thickness={3}
-        ratio={2}
-        scale={20}
-        color={"black"}
-      />
+      {headerSVG}
       <ul>
         <HeaderButton name="Home" current={currentPage} />
         <HeaderButton name="Skills" current={currentPage} />

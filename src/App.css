@@ -1,16 +1,86 @@
 body{
   font-family: 'Cormorant Infant', serif;
-  display: flex;
-  align-items:center;
+  /* display: flex;
+  align-items: center;
   flex-direction: column;
+  justify-content: center;
+  align-content: center; */
+}
+
+#root{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  overflow-x: hidden;
+
 }
 
 
 html {
   scroll-behavior: smooth;
+  font-weight: bold;
 }
 
 ::selection {
   background: var(--gold--name-plate);
   color: var(--black);
+}
+
+h1{
+  position:relative;
+  z-index: 1;
+  border: 1px solid var(--gold--border);
+  font-size: 5vh;
+  padding: 0.5vh;
+  text-align: center;
+  color: var(--gold--text);
+  background: var( --black--gradient);
+  width: 30vw;
+  margin-top: 7vh;
+  margin-bottom: 2vh;
+}
+
+.app__fancy-boarder div::before{
+  /* Set below variables in septate section so this code can be reused */
+  /* --fancy-offset: 5cqh; */
+  /* --fancy-color: var(--black--gradient); */
+  /* --fancy-boarder-width: 1px; */
+
+
+  --fancy-boarder-grad: linear-gradient(var(--gold--border) 0 0);
+  --fancy-offset-double: calc(var(--fancy-offset) * 2);
+  --fancy-offset-negative: calc(-1 * var(--fancy-offset));
+
+  position: absolute;
+  display: block;
+  height: calc(100cqh + var(--fancy-offset-double));
+  width: calc(100cqw + var(--fancy-offset-double));
+  left: var(--fancy-offset-negative);
+  top: var(--fancy-offset-negative);
+  background:
+  /* top 3 lines, out to in */
+  var(--fancy-boarder-grad) 50% 0 / calc(100cqw - var(--fancy-offset-double)) var(--fancy-boarder-width),
+  var(--fancy-boarder-grad) 50% var(--fancy-offset) / 100cqw var(--fancy-boarder-width),
+  var(--fancy-boarder-grad) 50% var(--fancy-offset-double) / calc(100cqw + var(--fancy-offset-double)) var(--fancy-boarder-width),
+  /* bottom 3 lines, out to in */
+  var(--fancy-boarder-grad) 50% 100% / calc(100cqw - var(--fancy-offset-double)) var(--fancy-boarder-width),
+  var(--fancy-boarder-grad) 50% calc(100% - var(--fancy-offset)) / 100cqw var(--fancy-boarder-width),
+  var(--fancy-boarder-grad) 50% calc(100% - var(--fancy-offset-double)) / calc(100cqw + var(--fancy-offset-double)) var(--fancy-boarder-width),
+  /* left 3 lines, out to in */
+  var(--fancy-boarder-grad) 0 50% / var(--fancy-boarder-width) calc(100cqh - var(--fancy-offset-double)),
+  var(--fancy-boarder-grad) var(--fancy-offset) 50% / var(--fancy-boarder-width) 100cqh,
+  var(--fancy-boarder-grad) var(--fancy-offset-double) 50% / var(--fancy-boarder-width) calc(100cqh + var(--fancy-offset-double)),
+  /* right 3 lines, out to in */
+  var(--fancy-boarder-grad) 100% 50% / var(--fancy-boarder-width) calc(100cqh - var(--fancy-offset-double)),
+  var(--fancy-boarder-grad) calc(100% - var(--fancy-offset)) 50% / var(--fancy-boarder-width) 100cqh,
+  var(--fancy-boarder-grad) calc(100% - var(--fancy-offset-double)) 50% / var(--fancy-boarder-width) calc(100cqh + var(--fancy-offset-double)),
+  /* fill for 3 squares */
+    var(--fancy-color) 50% 50%/100cqw 100cqh,
+    var(--fancy-color) 50% 50% / calc(100cqw + var(--fancy-offset-double)) calc(100cqh - var(--fancy-offset-double)),
+    var(--fancy-color) 50% 50% / calc(100cqw - var(--fancy-offset-double)) calc(100cqh + var(--fancy-offset-double));
+  background-repeat: no-repeat;
+  content: "";
+  z-index: 1;
 }

@@ -1,65 +1,95 @@
 .home-screen__main-container{
   width: 100vw;
-  height: 90vh;
+  height: 95vh;
   display: flex;
-  align-items:center;
-  justify-content:center;
+  align-items: center;
+  justify-content: space-evenly;
   flex-direction: column;
+  overflow: hidden;
   margin-bottom: 5vh;
   margin-top: 5vh;
 }
-.home-screen__text-box {
-  position:relative;
-  width: 70vw;
-  z-index: 1;
-  margin: 50px;
-  border: 1px solid var(--gold--border);
-  font-size: 2vw;
-}
-
 
 .home-screen__name-plate{
-  position:relative;
-  width: 50vw;
+  position: relative;
+  aspect-ratio: 1.42;
   z-index: 1;
-  margin: 50px;
   overflow: hidden;
   border: 1px solid var(--gold--border);
-  color: var(--black);
   background: var(--gold--name-plate);
-  font-size: 13vw;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5%;
 }
 
-@media(max-aspect-ratio: 1/1){
+.home-screen__text-box {
+  position: relative;
+  text-align: center;
+  aspect-ratio: 6.4;
+  z-index: 1;
+  /* border: 1px solid var(--gold--border); */
+}
+
+.home-screen__text-box--container{
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  container-type: size;
+
+}
+
+.home-screen__text-box div::before {
+  --fancy-offset: 5cqh;
+  --fancy-color: var(--black--gradient);
+  --fancy-boarder-width: 1px;
+}
+
+
+.home-screen__text-box h2{
+  font-size: 50cqh;
+  margin-block: 4cqh;
+  position: relative;
+  z-index: 2;
+}
+
+.home-screen__text-box p{
+  font-size: 20cqh;
+  margin-block: 1cqh;
+  position: relative;
+  z-index: 2;
+}
+
+@media(min-aspect-ratio: 1){
+  .home-screen__name-plate{
+    height: 50vh;
+  }
+  .home-screen__text-box {
+    height: 15vh;
+  }
+}
+
+@media(max-aspect-ratio: 1){
   .home-screen__name-plate{
     width: 90vw;
-    font-size: 30vw;
-
   }
   .home-screen__text-box {
     width: 90vw;
-    font-size: 8vw;
-
+    aspect-ratio: 6.4;
+  }
+  .home-screen__text-box h2{
+    font-size: 54cqh;
+    margin-block: 0cqh;
   }
 
-}
+  .home-screen__text-box p{
+    font-size: 24cqh;
+    margin-block: 0;
+  }
 
-
-
-
-
-
-
-.boxText{
-  position:absolute;
-  z-index:2;
-  font-size: 30px;
-  left: 10px;
-  top: 0px;
-}
-.boxAccent{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
+  .home-screen__text-box div::before {
+    --fancy-offset: 3cqh;
+    --fancy-color: var(--black--gradient);
+    --fancy-boarder-width: 1px;
+  }
 }

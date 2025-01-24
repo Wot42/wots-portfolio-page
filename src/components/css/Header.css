@@ -2,11 +2,11 @@
   position: fixed;
   top: 0;
   left: 0;
-  height: 4cqh;
-  width: 100cqw;
+  height: 5vh;
+  width: 100vw;
   background-color: var(--black);
   z-index: 100;
-  font-size: 3cqh;
+  font-size: 4vh;
   color: var(--gold--text)
 }
 
@@ -56,4 +56,8 @@
   position: absolute;
   z-index: 102;
   color: var(--black--accent);
+}
+
+@media(max-aspect-ratio: 0.5){
+  .header {font-size: 3vh;}
 }

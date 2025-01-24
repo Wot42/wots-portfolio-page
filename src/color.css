@@ -19,6 +19,7 @@
   --turquoise--accent: #006E6E;
   --purple--gradient: radial-gradient(#5A005A, #0A000A);
   --purple--accent: #6E006E;
+  --css-words--letters: black;
 
 }
 
@@ -101,4 +102,11 @@ body{
   background: #3C003C;
   background: #6E006E;
 
+}
+
+.color__logo-background{
+  background: var(--gold--name-plate);
+}
+.color__logo-letter{
+  background: var(--css-words--letters);
 }

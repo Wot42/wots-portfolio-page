@@ -9,6 +9,7 @@
   margin-top: 5vh;
   padding: 10vh 0;
   flex-wrap: wrap;
+  overflow: hidden;
 }
 
 .skills-screen__right-box{
