@@ -3,20 +3,28 @@
   display: flex;
   align-items:center;
   justify-content:center;
-  flex-wrap: wrap;
-  container-type: inline-size;
+  flex-direction:column;
   margin-bottom: 5vh;
   margin-top: 5vh;
-  padding: 10vh 0;
+  /* padding: 10vh 0; */
 }
 
 .projects-screen__project-box{
-  position:relative;
-  height: 22.5cqw;
-  width: 40cqw;
+  position: relative;
+  height: 38vh;
+  width: 40vw;
   z-index: 1;
-  margin: 1cqw;
+  margin: 1vh;
   border: 1px solid var(--gold--border);
+  container-type: size;
+}
+.projects-screen__quad-container{
+  width: 100vw;
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  flex-wrap: wrap;
+
 }
 
 @media(max-aspect-ratio: 1/1){

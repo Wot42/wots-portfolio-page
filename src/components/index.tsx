@@ -7,6 +7,7 @@ import { ProjectsScreen } from "./ProjectsScreen";
 import { SkillsScreen } from "./SkillsScreen";
 import { DecoPattern } from "./DecoPattern";
 import { DecoPatternForBackground } from "./DecoPatternForBackground";
+import { CssWords } from "./CssWords";
 
 export {
   Background,
@@ -18,4 +19,5 @@ export {
   SkillsScreen,
   DecoPattern,
   DecoPatternForBackground,
+  CssWords,
 };
