@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import { useInView } from "framer-motion";
 import "./css/ProjectsScreen.css";
+import ProjectCard from "./ProjectCard";
+import { projectsCardData } from "data/projectCardData";
 
 interface props {
   setOnScreen: React.Dispatch<React.SetStateAction<boolean>>;
@@ -21,10 +23,22 @@ export const ProjectsScreen = ({ setOnScreen, updateCurrentPage }: props) => {
       <div className="projects-screen__main-container" id="Projects" ref={ref}>
         <h1>Projects</h1>
         <div className="projects-screen__quad-container">
-          <div className="projects-screen__project-box color__gold--text color__red"></div>
-          <div className="projects-screen__project-box color__gold--text color__blue"></div>
-          <div className="projects-screen__project-box color__gold--text color__green"></div>
-          <div className="projects-screen__project-box color__gold--text color__sepia"></div>
+          <ProjectCard
+            projectColor="project-card__red"
+            projectData={projectsCardData[1]}
+          />
+          <ProjectCard
+            projectColor="project-card__blue"
+            projectData={projectsCardData[2]}
+          />
+          <ProjectCard
+            projectColor="project-card__green"
+            projectData={projectsCardData[3]}
+          />
+          <ProjectCard
+            projectColor="project-card__sepia"
+            projectData={projectsCardData[4]}
+          />
         </div>
       </div>
     </React.Fragment>

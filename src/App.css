@@ -23,6 +23,9 @@ html {
   font-weight: bold;
 }
 
+img{object-fit: contain;}
+div{scrollbar-color: var(--gold--border) transparent;}
+
 ::selection {
   background: var(--gold--name-plate);
   color: var(--black);
@@ -33,16 +36,16 @@ h1{
   z-index: 1;
   border: 1px solid var(--gold--border);
   font-size: 5vh;
-  padding: 0.5vh;
+  padding: 0.5vh 2vh;
   text-align: center;
   color: var(--gold--text);
   background: var( --black--gradient);
-  width: 30vw;
+  /* width: 30vw; */
   margin-top: 7vh;
   margin-bottom: 2vh;
 }
 
-.app__fancy-boarder div::before{
+.app__fancy-boarder::before{
   /* Set below variables in septate section so this code can be reused */
   /* --fancy-offset: 5cqh; */
   /* --fancy-color: var(--black--gradient); */

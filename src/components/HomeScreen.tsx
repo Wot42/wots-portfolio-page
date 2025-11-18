@@ -22,8 +22,8 @@ export const HomeScreen = ({ setOnScreen, updateCurrentPage }: props) => {
       <div className="home-screen__name-plate">
         <CssWords />
       </div>
-      <div className="home-screen__text-box app__fancy-boarder color__gold--text">
-        <div className="home-screen__text-box--container">
+      <div className="home-screen__text-box color__gold--text">
+        <div className="home-screen__text-box--container app__fancy-boarder">
           <h2>Full-Stack Web Developer</h2>
           <p>(The above name plate has no text and is made of pure css)</p>
         </div>

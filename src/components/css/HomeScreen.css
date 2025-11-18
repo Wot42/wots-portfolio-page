@@ -28,7 +28,10 @@
   text-align: center;
   aspect-ratio: 6.4;
   z-index: 1;
-  /* border: 1px solid var(--gold--border); */
+
+  --fancy-offset: 5cqh;
+  --fancy-color: var(--black--gradient);
+  --fancy-boarder-width: 1px;
 }
 
 .home-screen__text-box--container{
@@ -36,13 +39,6 @@
   width: 100%;
   text-align: center;
   container-type: size;
-
-}
-
-.home-screen__text-box div::before {
-  --fancy-offset: 5cqh;
-  --fancy-color: var(--black--gradient);
-  --fancy-boarder-width: 1px;
 }
 
 
@@ -76,6 +72,10 @@
   .home-screen__text-box {
     width: 90vw;
     aspect-ratio: 6.4;
+
+    --fancy-offset: 3cqh;
+    --fancy-color: var(--black--gradient);
+    --fancy-boarder-width: 1px;
   }
   .home-screen__text-box h2{
     font-size: 54cqh;
@@ -85,11 +85,5 @@
   .home-screen__text-box p{
     font-size: 24cqh;
     margin-block: 0;
-  }
-
-  .home-screen__text-box div::before {
-    --fancy-offset: 3cqh;
-    --fancy-color: var(--black--gradient);
-    --fancy-boarder-width: 1px;
   }
 }

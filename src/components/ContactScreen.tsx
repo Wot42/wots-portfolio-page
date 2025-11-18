@@ -19,7 +19,6 @@ export const ContactScreen = ({ setOnScreen, updateCurrentPage }: props) => {
 
   return (
     <div className="contact-screen__main-container" id="Contact" ref={ref}>
-      {" "}
       <motion.div
         className={`color__purple contact-screen__card color__gold--text`}
         initial={{ opacity: 0 }}
@@ -28,8 +27,8 @@ export const ContactScreen = ({ setOnScreen, updateCurrentPage }: props) => {
       >
         <div className="boxAccent">
           <DecoPattern
-            height={310}
-            width={(2 * window.screen.width) / 3}
+            height={window.screen.height}
+            width={window.screen.width}
             thickness={3}
             ratio={2}
             scale={20}
@@ -37,18 +36,25 @@ export const ContactScreen = ({ setOnScreen, updateCurrentPage }: props) => {
           />
         </div>
         <div className="boxText">
-          {" "}
-          <strong>
-            Wot Fanar
-            <br />
-            Email: wotfanar.webdeveloper@gmail.com
-            <br />
-            Linked In: linkedin.com/in/wotfanar
-            <br />
-            Github: github.com/Wot42
-            <br />
-            CV: colour printer friendly
-          </strong>
+          <h3>Wot Fanar</h3>
+          Email:
+          <br />
+          <a href="mailto:wotfanar.webdeveloper@gmail.com">
+            wotfanar.webdeveloper@gmail.com
+          </a>
+          <br />
+          Linked In: <br />
+          <a href="https://www.linkedin.com/in/wotfanar">
+            linkedin.com/in/wotfanar
+          </a>
+          <br />
+          Github: <br />
+          <a href="https://github.com/Wot42">github.com/Wot42</a>
+          <br />
+          CV: <br />
+          <a href="https://www.canva.com/design/DAFMyPJggtI/wLSyHZQkhZIreO9z3oypHQ/edit?utm_content=DAFMyPJggtI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">
+            link
+          </a>
         </div>
       </motion.div>
     </div>
